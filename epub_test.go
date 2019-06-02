@@ -27,9 +27,9 @@ func TestGetMetadata(t *testing.T) {
 		out = append(out, m)
 	}
 
-	got, err := json.Marshal(out)
+	got, err := json.MarshalIndent(out, "", "  ")
 	if err != nil {
-		t.Fatalf("fail to marshal test output to json: %v", err)
+		t.Fatalf("Fail to marshal test output to json: %v", err)
 	}
 
 	verify.MatchGolden(t, string(got), "Metadata is not as expected.")

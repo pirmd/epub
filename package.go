@@ -8,6 +8,7 @@ type packageXML struct {
 	XMLName  xml.Name  `xml:"http://www.idpf.org/2007/opf package"`
 	Version  string    `xml:"version,attr"`
 	Metadata *Metadata `xml:"metadata"`
+	Manifest *Manifest `xml:"manifest"`
 }
 
 type Metadata struct {
@@ -49,4 +50,14 @@ type Date struct {
 type Meta struct {
 	Name    string `xml:"name,attr"`
 	Content string `xml:"content,attr"`
+}
+
+type Manifest struct {
+	Item []*Item `xml:"item"`
+}
+
+type Item struct {
+	ID        string `xml:"id,attr"`
+	Href      string `xml:"href,attr"`
+	MediaType string `xml:"media-type,attr"`
 }

@@ -13,7 +13,7 @@ import (
 
 //GetMetadata reads metadata from the given epub opened as a readatSeeker
 func GetMetadata(r readatSeeker) (*Metadata, error) {
-	opf, err := getOPFData(r)
+	opf, err := GetOPFData(r)
 	if err != nil {
 		return nil, fmt.Errorf("not a valid Epub: %v", err)
 	}
@@ -47,7 +47,8 @@ func getContainerData(r readatSeeker) (*containerXML, error) {
 	return c, nil
 }
 
-func getOPFData(r readatSeeker) (*packageXML, error) {
+// GetOPFData reads the whole OPF from the given epub file
+func GetOPFData(r readatSeeker) (*packageXML, error) {
 	c, err := getContainerData(r)
 	if err != nil {
 		return nil, err

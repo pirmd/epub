@@ -1,7 +1,10 @@
-# INTRODUCTION
+# EPUB
+[![GoDoc](https://godoc.org/github.com/pirmd/epub?status.svg)](https://godoc.org/github.com/pirmd/epub)&nbsp; 
+[![Go Report Card](https://goreportcard.com/badge/github.com/pirmd/epub)](https://goreportcard.com/report/github.com/pirmd/epub)&nbsp;
+
 `epub` package provides a way to retrieve stored metadata from epub files.
 
-At this point of time only retrieveing of metadata is supported and compliance
+At this point of time only retrieving of metadata is supported and compliance
 with epub format 3 or more is only partial.
 
 `epub` package offers also a minimal tool to print to the standard output the
@@ -14,9 +17,9 @@ Everything should work fine using go standard commands (`build`, `get`,
 To install the metadata reading utility, run `go install ./cmd/epub`.
 
 # USAGE
-Running `godoc` should give you helpful guideines on availbales features.
+Running `godoc` should give you helpful guidelines on available features.
 
-Metadata reading utility usage is straitforward, just type `epub <epub>`, where
+Metadata reading utility usage is straightforward, just type `epub <epub>`, where
 '<epub>' is the path to the epub file you want to read metadata from.
 
 # CONTRIBUTION

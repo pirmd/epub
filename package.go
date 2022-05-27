@@ -5,9 +5,11 @@ import (
 )
 
 type packageXML struct {
-	XMLName  xml.Name  `xml:"http://www.idpf.org/2007/opf package"`
-	Version  string    `xml:"version,attr"`
-	Metadata *Metadata `xml:"metadata"`
+	XMLName  xml.Name     `xml:"http://www.idpf.org/2007/opf package"`
+	Version  string       `xml:"version,attr"`
+	Metadata *Metadata    `xml:"metadata"`
+	Manifest []*Manifest  `xml:"manifest>item"`
+	Spine    *Spine       `xml:"spine"`
 }
 
 type Metadata struct {
@@ -49,4 +51,27 @@ type Date struct {
 type Meta struct {
 	Name    string `xml:"name,attr"`
 	Content string `xml:"content,attr"`
+}
+
+type Manifest struct {
+	ID           string `xml:"id,attr"`
+	Href         string `xml:"href,attr"`
+	MediaType    string `xml:"media-type,attr"`
+	Fallback     string `xml:"media-fallback,attr"`
+	Properties   string `xml:"properties,attr"`
+	MediaOverlay string `xml:"media-overlay,attr"`
+}
+
+type Spine struct {
+	ID              string      `xml:"id,attr"`
+	Toc             string      `xml:"toc,attr"`
+	PageProgression string      `xml:"page-progression-direction,attr"`
+	Items           []SpineItem `xml:"itemref"`
+}
+
+type SpineItem struct {
+	IDref      string `xml:"idref,attr"`
+	Linear     string `xml:"linear,attr"`
+	ID         string `xml:"id,attr"`
+	Properties string `xml:"properties,attr"`
 }

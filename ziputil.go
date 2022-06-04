@@ -6,12 +6,13 @@ import (
 	"os"
 )
 
-type readatSeeker interface {
+// ReadAtSeeker groups a io.ReaderAt and a io.Seeker.
+type ReadAtSeeker interface {
 	io.ReaderAt
 	io.Seeker
 }
 
-func openFromZip(r readatSeeker, path string) (io.ReadCloser, error) {
+func openFromZip(r ReadAtSeeker, path string) (io.ReadCloser, error) {
 	zr, err := newZipReader(r)
 	if err != nil {
 		return nil, err
@@ -25,7 +26,7 @@ func openFromZip(r readatSeeker, path string) (io.ReadCloser, error) {
 	return nil, os.ErrNotExist
 }
 
-func newZipReader(r readatSeeker) (*zip.Reader, error) {
+func newZipReader(r ReadAtSeeker) (*zip.Reader, error) {
 	size, err := getSize(r)
 	if err != nil {
 		return nil, err

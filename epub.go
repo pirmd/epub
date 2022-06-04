@@ -81,8 +81,8 @@ type GenericMetadata struct {
 	Content string
 }
 
-// GetMetadata reads metadata from the given epub opened as a readatSeeker.
-func GetMetadata(rzip readatSeeker) (*MetaInformation, error) {
+// GetMetadata reads metadata from the given epub opened as a ReadAtSeeker.
+func GetMetadata(rzip ReadAtSeeker) (*MetaInformation, error) {
 	opf, err := GetPackage(rzip)
 	if err != nil {
 		return nil, fmt.Errorf("not a valid Epub: %v", err)
@@ -102,8 +102,8 @@ func GetMetadataFromFile(path string) (*MetaInformation, error) {
 	return GetMetadata(rzip)
 }
 
-// GetPackage reads an epub's Open Package Document from an epub opened as a readatSeeker.
-func GetPackage(rzip readatSeeker) (*PackageDocument, error) {
+// GetPackage reads an epub's Open Package Document from an epub opened as a ReadAtSeeker.
+func GetPackage(rzip ReadAtSeeker) (*PackageDocument, error) {
 	c, err := getContainer(rzip)
 	if err != nil {
 		return nil, err
@@ -129,7 +129,7 @@ func GetPackageFromFile(path string) (*PackageDocument, error) {
 	return GetPackage(rzip)
 }
 
-func getContainer(rzip readatSeeker) (*container, error) {
+func getContainer(rzip ReadAtSeeker) (*container, error) {
 	r, err := openFromZip(rzip, containerPath)
 	if err != nil {
 		return nil, err

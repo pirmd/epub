@@ -1,6 +1,7 @@
 # Changelog
 ## [0.2.0]
-- add reading Manifest and Spine information from opf file.
+- add compliance to EPUB32 specifications https://www.w3.org/publishing/epub32/epub-packages.html.
+- expose PackageDocument struct and add functions to aread it from an epub.
 
 ## [0.1.0] - 2019-05-11
 ### Added

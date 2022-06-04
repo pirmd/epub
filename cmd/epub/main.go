@@ -10,20 +10,12 @@ import (
 )
 
 func stringify(v interface{}) string {
-	if s, err := jsonStringifier(v); err == nil {
-		return s
-	}
-
-	return fmt.Sprintf("%+v", v)
-}
-
-func jsonStringifier(v interface{}) (string, error) {
 	b, err := json.MarshalIndent(v, "", "  ")
 	if err != nil {
-		return "", err
+		return fmt.Sprintf("%+v", v)
 	}
 
-	return string(b), nil
+	return string(b)
 }
 
 func main() {

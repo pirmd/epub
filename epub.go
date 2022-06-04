@@ -1,76 +1,220 @@
-// epub package provides a way to retrieve stored metadata from epub files.
-
+// Package epub provides a way to retrieve stored metadata from epub files.
 package epub
 
 import (
-	"encoding/xml"
 	"fmt"
-	"io"
 	"os"
-
-	"golang.org/x/net/html/charset"
 )
 
-//GetMetadata reads metadata from the given epub opened as a readatSeeker
-func GetMetadata(r readatSeeker) (*Metadata, error) {
-	opf, err := getOPFData(r)
+// MetaInformation gathers meta information about an epub as a simpler version
+// of Metadata to offer a more direct access to an Epub's metadata for simple
+// use cases.
+type MetaInformation struct {
+	// Identifier contains an identifier associated with the given
+	// Rendition, such as a UUID, DOI or ISBN.
+	Identifier []Identifier
+	// Title represents an instance of a name given to the EPUB
+	// Publication.
+	Title []string
+	// Language element specifies the language of the content of the
+	// given Rendition.
+	Language []string
+
+	// Contributor represents the name of a person, organization, etc.
+	// that played a secondary role in the creation of the content of an
+	// EPUB Publication.
+	Contributor []Author `json:",omitempty"`
+	// Coverage gives the extent or scope of the publication’s content.
+	Coverage []string `json:",omitempty"`
+	// Creator represents the name of a person, organization, etc.
+	// responsible for the creation of the content of the Rendition.
+	Creator []Author
+	// Date lists events associated to the EPUB like publication, creation...
+	Date []Date `json:",omitempty"`
+	// Description provides a description of the publication's content.
+	Description []string `json:",omitempty"`
+	// Format identifies the media type or dimensions of the resource.
+	Format []string `json:",omitempty"`
+	// Publisher identifies the publication's publisher.
+	Publisher []string `json:",omitempty"`
+	// Relation is an identifier of an auxiliary resource and its
+	// relationship to the publication.
+	Relation []string `json:",omitempty"`
+	// Rights provides a statement about rights, or a reference to one.
+	Rights []string `json:",omitempty"`
+	// Sources provides information regarding a prior resource from which
+	// the publication was derived.
+	Source []string `json:",omitempty"`
+	// Subject identifies the subject of the EPUB Publication.
+	Subject []string `json:",omitempty"`
+	// Type is used to indicate that the given EPUB Publication is of a
+	// specialized type.
+	Type []string `json:",omitempty"`
+
+	// Meta element provides a generic means of including package
+	// metadata.
+	Meta []GenericMetadata `json:",omitempty"`
+}
+
+// Identifier represents an identifier.
+type Identifier struct {
+	Scheme string
+	Value  string
+}
+
+// Author represents an author.
+type Author struct {
+	FullName string
+	FileAs   string
+	Role     string
+}
+
+// Date represents an event.
+type Date struct {
+	Stamp string
+	Event string
+}
+
+// GenericMetadata represents a generic metadata.
+type GenericMetadata struct {
+	Name    string
+	Content string
+}
+
+// GetMetadata reads metadata from the given epub opened as a readatSeeker.
+func GetMetadata(rzip readatSeeker) (*MetaInformation, error) {
+	opf, err := GetPackage(rzip)
 	if err != nil {
 		return nil, fmt.Errorf("not a valid Epub: %v", err)
 	}
 
-	return opf.Metadata, nil
+	return getMeta(opf.Metadata), nil
 }
 
-//GetMetadataFromFile reads metadata from the given epub file
-func GetMetadataFromFile(path string) (*Metadata, error) {
-	r, err := os.Open(path)
+// GetMetadataFromFile reads metadata from an epub file.
+func GetMetadataFromFile(path string) (*MetaInformation, error) {
+	rzip, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer rzip.Close()
+
+	return GetMetadata(rzip)
+}
+
+// GetPackage reads an epub's Open Package Document from an epub opened as a readatSeeker.
+func GetPackage(rzip readatSeeker) (*PackageDocument, error) {
+	c, err := getContainer(rzip)
+	if err != nil {
+		return nil, err
+	}
+
+	r, err := openFromZip(rzip, c.Rootfiles.FullPath)
 	if err != nil {
 		return nil, err
 	}
 	defer r.Close()
 
-	return GetMetadata(r)
+	return newPackageDocument(r)
 }
 
-func getContainerData(r readatSeeker) (*containerXML, error) {
-	f, err := openFromZip(r, containerPath)
+// GetPackageFromFile reads an epub's Open Package Document from an epub  file.
+func GetPackageFromFile(path string) (*PackageDocument, error) {
+	rzip, err := os.Open(path)
 	if err != nil {
 		return nil, err
 	}
-	defer f.Close()
+	defer rzip.Close()
 
-	c := &containerXML{}
-	err = decodeXML(f, &c)
-	if err != nil {
-		return nil, err
-	}
-	return c, nil
+	return GetPackage(rzip)
 }
 
-func getOPFData(r readatSeeker) (*packageXML, error) {
-	c, err := getContainerData(r)
+func getContainer(rzip readatSeeker) (*container, error) {
+	r, err := openFromZip(rzip, containerPath)
 	if err != nil {
 		return nil, err
 	}
+	defer r.Close()
 
-	f, err := openFromZip(r, c.Rootfiles.FullPath)
-	if err != nil {
-		return nil, err
-	}
-	defer f.Close()
-
-	opf := &packageXML{}
-	err = decodeXML(f, &opf)
-	if err != nil {
-		return nil, err
-	}
-
-	return opf, nil
+	return newContainer(r)
 }
 
-func decodeXML(f io.Reader, v interface{}) error {
-	decoder := xml.NewDecoder(f)
-	decoder.Entity = xml.HTMLEntity
-	decoder.CharsetReader = charset.NewReaderLabel
-	return decoder.Decode(v)
+func getMeta(mdata *Metadata) *MetaInformation {
+	m := &MetaInformation{
+		Title:       elt2str(mdata.Title),
+		Language:    elt2str(mdata.Language),
+		Subject:     elt2str(mdata.Subject),
+		Description: elt2str(mdata.Description),
+		Publisher:   elt2str(mdata.Publisher),
+		Type:        elt2str(mdata.Type),
+		Format:      elt2str(mdata.Format),
+		Source:      elt2str(mdata.Source),
+		Relation:    elt2str(mdata.Relation),
+		Coverage:    elt2str(mdata.Coverage),
+		Rights:      elt2str(mdata.Rights),
+	}
+
+	for _, id := range mdata.Identifier {
+		m.Identifier = append(m.Identifier, Identifier{
+			Value:  id.Value,
+			Scheme: id.Scheme,
+		})
+	}
+
+	for _, auth := range mdata.Creator {
+		m.Creator = append(m.Creator, getAuth(auth, mdata))
+	}
+
+	for _, auth := range mdata.Contributor {
+		m.Contributor = append(m.Contributor, getAuth(auth, mdata))
+	}
+
+	for _, date := range mdata.Date {
+		m.Date = append(m.Date, Date{
+			Stamp: date.Value,
+			Event: date.Event,
+		})
+	}
+
+	for _, meta := range mdata.Meta {
+		m.Meta = append(m.Meta, GenericMetadata{
+			Name:    meta.Name,
+			Content: meta.Content,
+		})
+	}
+
+	return m
+}
+
+func elt2str(elt []Element) []string {
+	s := make([]string, len(elt))
+
+	for i, e := range elt {
+		s[i] = e.Value
+	}
+
+	return s
+}
+
+func getAuth(auth AuthorElt, mdata *Metadata) Author {
+	a := Author{
+		FullName: auth.Value,
+		Role:     auth.Role,
+		FileAs:   auth.FileAs,
+	}
+
+	for _, meta := range mdata.Meta {
+		if meta.Refines != "#"+auth.ID {
+			continue
+		}
+
+		switch meta.Property {
+		case "role":
+			a.Role = meta.Value
+		case "file-as":
+			a.FileAs = meta.Value
+		}
+	}
+
+	return a
 }

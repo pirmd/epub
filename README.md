@@ -4,9 +4,6 @@
 
 `epub` package provides a way to retrieve stored metadata from epub files.
 
-At this point of time only retrieving of metadata is supported and compliance
-with epub format 3 or more is only partial.
-
 `epub` package offers also a minimal tool to print to the standard output the
 metadata of the given epub file.
 

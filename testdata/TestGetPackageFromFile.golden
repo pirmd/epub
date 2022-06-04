@@ -1,0 +1,3503 @@
+[
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "book-id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "book-id",
+          "Lang": "",
+          "Value": "123456789X",
+          "Scheme": "ISBN"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Row, Row, Row Your Boat"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "en-US"
+        }
+      ],
+      "Contributor": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Phys.Org",
+          "FileAs": "Phys.Org",
+          "Role": "ill"
+        }
+      ],
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Unknown Person",
+          "FileAs": "Unknown Person",
+          "Role": "aut"
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2018-01-01T00:00:00Z",
+          "Event": "publication"
+        }
+      ],
+      "Description": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "\"Row, Row, Row Your Boat\" is a popular children's song. The earliest printing of the song is from 1852, when the lyrics were published with similar lyrics to those used today, but with a very different tune."
+        }
+      ],
+      "Format": null,
+      "Publisher": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "FYIcenter.com"
+        }
+      ],
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "CC0 Public Domain"
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "urn:isbn:9780375704024"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "MUSIC / Lyrics"
+        }
+      ],
+      "Type": null,
+      "Meta": null,
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "navigation.xml",
+          "ID": "navigation",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "cover.xhtml",
+          "ID": "cover",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "content.xhtml",
+          "ID": "content",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "Row-Your-Boat.jpg",
+          "ID": "Row-Your-Boat",
+          "MediaOverlay": "",
+          "MediaType": "image/jpeg",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "navigation",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "cover",
+          "Linear": "no",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "content",
+          "Linear": "",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "book-id",
+    "Version": "3.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "book-id",
+          "Lang": "",
+          "Value": "urn:uuid:404d6d3a-429e-11e8-842f-0ed5f89f718b",
+          "Scheme": ""
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "main",
+          "Lang": "",
+          "Value": "Row, Row, Row Your Boat"
+        },
+        {
+          "Dir": "",
+          "ID": "short",
+          "Lang": "",
+          "Value": "Row Your Boat"
+        },
+        {
+          "Dir": "",
+          "ID": "edition",
+          "Lang": "",
+          "Value": "First Edition"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "en-US"
+        }
+      ],
+      "Contributor": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Phys.Org",
+          "FileAs": "",
+          "Role": ""
+        }
+      ],
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Unknown Person",
+          "FileAs": "",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2018-01-01T00:00:00Z",
+          "Event": ""
+        }
+      ],
+      "Description": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "\"Row, Row, Row Your Boat\" is a popular children's song. The earliest printing of the song is from 1852, when the lyrics were published with similar lyrics to those used today, but with a very different tune."
+        }
+      ],
+      "Format": null,
+      "Publisher": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "FYIcenter.com"
+        }
+      ],
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "CC0 Public Domain"
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "urn:isbn:9780375704024"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "MUSIC / Lyrics"
+        }
+      ],
+      "Type": null,
+      "Meta": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "title-type",
+          "Refines": "#main",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "main",
+          "Name": "",
+          "Content": ""
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "title-type",
+          "Refines": "#short",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "short",
+          "Name": "",
+          "Content": ""
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "title-type",
+          "Refines": "#edition",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "edition",
+          "Name": "",
+          "Content": ""
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "dcterms:modified",
+          "Refines": "",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "2018-04-01T00:00:00Z",
+          "Name": "",
+          "Content": ""
+        }
+      ],
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "Row-Your-Boat.jpg",
+          "ID": "cover",
+          "MediaOverlay": "",
+          "MediaType": "image/jpeg",
+          "Properties": "cover-image"
+        },
+        {
+          "Fallback": "",
+          "Href": "navigation.xhtml",
+          "ID": "navigation",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": "nav"
+        },
+        {
+          "Fallback": "",
+          "Href": "content.xhtml",
+          "ID": "content",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "content",
+          "Linear": "",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/11",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Alice's Adventures in Wonderland"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "en"
+        }
+      ],
+      "Contributor": null,
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Lewis Carroll",
+          "FileAs": "Carroll, Lewis",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2008-06-27",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2016-12-01T06:02:19.097249+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/files/11/11-h/11-h.htm"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Fantasy"
+        }
+      ],
+      "Type": null,
+      "Meta": null,
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "0.css",
+          "ID": "item2",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "1.css",
+          "ID": "item3",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@11@11-h@11-h-0.htm.html",
+          "ID": "item4",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@11@11-h@11-h-1.htm.html",
+          "ID": "item5",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@11@11-h@11-h-2.htm.html",
+          "ID": "item6",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@11@11-h@11-h-3.htm.html",
+          "ID": "item7",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "item4",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item5",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item6",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item7",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/12783",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Les Mémoires d'un âne."
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "fr"
+        }
+      ],
+      "Contributor": null,
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "comtesse de Sophie Ségur",
+          "FileAs": "Ségur, Sophie, comtesse de",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2004-06-29",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2017-08-07T06:29:44.304163+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/files/12783/12783-h/12783-h.htm"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Donkeys -- Juvenile fiction"
+        }
+      ],
+      "Type": null,
+      "Meta": null,
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "0.css",
+          "ID": "item2",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "1.css",
+          "ID": "item3",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@12783@12783-h@12783-h-0.htm.html",
+          "ID": "item4",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@12783@12783-h@12783-h-1.htm.html",
+          "ID": "item5",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@12783@12783-h@12783-h-2.htm.html",
+          "ID": "item6",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@12783@12783-h@12783-h-3.htm.html",
+          "ID": "item7",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@12783@12783-h@12783-h-4.htm.html",
+          "ID": "item8",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@12783@12783-h@12783-h-5.htm.html",
+          "ID": "item9",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "item4",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item5",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item6",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item7",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item8",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item9",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/1661",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "The Adventures of Sherlock Holmes"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "en"
+        }
+      ],
+      "Contributor": null,
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Arthur Conan Doyle",
+          "FileAs": "Doyle, Arthur Conan",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "1999-03-01",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2016-12-01T09:24:04.122080+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/files/1661/1661-h/1661-h.htm"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Holmes, Sherlock (Fictitious character) -- Fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Private investigators -- England -- Fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Detective and mystery stories, English"
+        }
+      ],
+      "Type": null,
+      "Meta": null,
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "0.css",
+          "ID": "item2",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "1.css",
+          "ID": "item3",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-0.htm.html",
+          "ID": "item4",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-1.htm.html",
+          "ID": "item5",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-2.htm.html",
+          "ID": "item6",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-3.htm.html",
+          "ID": "item7",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-4.htm.html",
+          "ID": "item8",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-5.htm.html",
+          "ID": "item9",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-6.htm.html",
+          "ID": "item10",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-7.htm.html",
+          "ID": "item11",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-8.htm.html",
+          "ID": "item12",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-9.htm.html",
+          "ID": "item13",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-10.htm.html",
+          "ID": "item14",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-11.htm.html",
+          "ID": "item15",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@1661@1661-h@1661-h-12.htm.html",
+          "ID": "item16",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "item4",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item5",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item6",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item7",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item8",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item9",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item10",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item11",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item12",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item13",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item14",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item15",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item16",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/23962",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "西遊記"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "zh"
+        }
+      ],
+      "Contributor": null,
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Cheng'en Wu",
+          "FileAs": "Wu, Cheng'en",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2007-12-22",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2017-08-12T08:26:52.563110+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.orgfiles/23962/23962-0.txt"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Folklore -- China"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Legends -- China"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Xuanzang, approximately 596-664 -- Fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Chinese fiction -- Ming dynasty, 1368-1644"
+        }
+      ],
+      "Type": null,
+      "Meta": null,
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-0.txt.html",
+          "ID": "id00000",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-1.txt.html",
+          "ID": "id00055",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-2.txt.html",
+          "ID": "id00091",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-3.txt.html",
+          "ID": "id00135",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-4.txt.html",
+          "ID": "id00176",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-5.txt.html",
+          "ID": "id00219",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-6.txt.html",
+          "ID": "id00265",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-7.txt.html",
+          "ID": "id00309",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-8.txt.html",
+          "ID": "id00351",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-9.txt.html",
+          "ID": "id00394",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-10.txt.html",
+          "ID": "id00428",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-11.txt.html",
+          "ID": "id00464",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-12.txt.html",
+          "ID": "id00499",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-13.txt.html",
+          "ID": "id00534",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-14.txt.html",
+          "ID": "id00573",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-15.txt.html",
+          "ID": "id00616",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-16.txt.html",
+          "ID": "id00656",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-17.txt.html",
+          "ID": "id00696",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-18.txt.html",
+          "ID": "id00737",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-19.txt.html",
+          "ID": "id00782",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-20.txt.html",
+          "ID": "id00825",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-21.txt.html",
+          "ID": "id00869",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-22.txt.html",
+          "ID": "id00906",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-23.txt.html",
+          "ID": "id00945",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-24.txt.html",
+          "ID": "id00981",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-25.txt.html",
+          "ID": "id01024",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-26.txt.html",
+          "ID": "id01069",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-27.txt.html",
+          "ID": "id01103",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-28.txt.html",
+          "ID": "id01134",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-29.txt.html",
+          "ID": "id01175",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-30.txt.html",
+          "ID": "id01225",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-31.txt.html",
+          "ID": "id01268",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-32.txt.html",
+          "ID": "id01306",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-33.txt.html",
+          "ID": "id01353",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-34.txt.html",
+          "ID": "id01405",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-35.txt.html",
+          "ID": "id01447",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-36.txt.html",
+          "ID": "id01496",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-37.txt.html",
+          "ID": "id01539",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-38.txt.html",
+          "ID": "id01579",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-39.txt.html",
+          "ID": "id01628",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-40.txt.html",
+          "ID": "id01669",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-41.txt.html",
+          "ID": "id01714",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-42.txt.html",
+          "ID": "id01758",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-43.txt.html",
+          "ID": "id01795",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-44.txt.html",
+          "ID": "id01834",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-45.txt.html",
+          "ID": "id01877",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-46.txt.html",
+          "ID": "id01915",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-47.txt.html",
+          "ID": "id01967",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-48.txt.html",
+          "ID": "id02009",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-49.txt.html",
+          "ID": "id02051",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-50.txt.html",
+          "ID": "id02093",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-51.txt.html",
+          "ID": "id02136",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-52.txt.html",
+          "ID": "id02175",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-53.txt.html",
+          "ID": "id02217",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-54.txt.html",
+          "ID": "id02251",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-55.txt.html",
+          "ID": "id02293",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-56.txt.html",
+          "ID": "id02328",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-57.txt.html",
+          "ID": "id02369",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-58.txt.html",
+          "ID": "id02412",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-59.txt.html",
+          "ID": "id02445",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-60.txt.html",
+          "ID": "id02480",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-61.txt.html",
+          "ID": "id02517",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-62.txt.html",
+          "ID": "id02558",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-63.txt.html",
+          "ID": "id02596",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-64.txt.html",
+          "ID": "id02639",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-65.txt.html",
+          "ID": "id02684",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-66.txt.html",
+          "ID": "id02723",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-67.txt.html",
+          "ID": "id02765",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-68.txt.html",
+          "ID": "id02806",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-69.txt.html",
+          "ID": "id02857",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-70.txt.html",
+          "ID": "id02893",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-71.txt.html",
+          "ID": "id02928",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@23962@23962-0-72.txt.html",
+          "ID": "id02967",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "id00000",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00055",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00091",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00135",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00176",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00219",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00265",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00309",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00351",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00394",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00428",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00464",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00499",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00534",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00573",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00616",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00656",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00696",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00737",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00782",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00825",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00869",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00906",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00945",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00981",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01024",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01069",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01103",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01134",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01175",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01225",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01268",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01306",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01353",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01405",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01447",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01496",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01539",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01579",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01628",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01669",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01714",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01758",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01795",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01834",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01877",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01915",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01967",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02009",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02051",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02093",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02136",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02175",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02217",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02251",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02293",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02328",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02369",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02412",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02445",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02480",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02517",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02558",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02596",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02639",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02684",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02723",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02765",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02806",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02857",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02893",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02928",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02967",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/29052",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Histoire de Pierre Lapin"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "fr"
+        }
+      ],
+      "Contributor": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Victorine Ballon",
+          "FileAs": "Ballon, Victorine",
+          "Role": "trl"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Julienne Profichet",
+          "FileAs": "Profichet, Julienne",
+          "Role": "trl"
+        }
+      ],
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Beatrix Potter",
+          "FileAs": "Potter, Beatrix",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2009-06-06",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2018-10-14T08:11:25.330821+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/files/29052/29052-h/29052-h.htm"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Rabbits -- Juvenile fiction"
+        }
+      ],
+      "Type": null,
+      "Meta": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "",
+          "Refines": "",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "",
+          "Name": "cover",
+          "Content": "item1"
+        }
+      ],
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@29052@29052-h@images@cover.jpg",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "image/jpeg",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item2",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "0.css",
+          "ID": "item3",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "1.css",
+          "ID": "item4",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@29052@29052-h@29052-h-0.htm.html",
+          "ID": "item5",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "wrap0000.html",
+          "ID": "coverpage-wrapper",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "coverpage-wrapper",
+          "Linear": "no",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item5",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/4791",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Voyage au Centre de la Terre"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "fr"
+        }
+      ],
+      "Contributor": null,
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Jules Verne",
+          "FileAs": "Verne, Jules",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2003-12-01",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2017-08-03T06:17:04.468944+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.orgfiles/4791/4791-8/4791-8.txt"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Science fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Adventure stories"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Earth (Planet) -- Core -- Fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Voyages, Imaginary -- Fiction"
+        }
+      ],
+      "Type": null,
+      "Meta": null,
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-0.txt.html",
+          "ID": "id00000",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-1.txt.html",
+          "ID": "id00313",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-2.txt.html",
+          "ID": "id00625",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-3.txt.html",
+          "ID": "id00844",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-4.txt.html",
+          "ID": "id01161",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-5.txt.html",
+          "ID": "id01513",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-6.txt.html",
+          "ID": "id01834",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@4791@4791-8@4791-8-7.txt.html",
+          "ID": "id02115",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "id00000",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00313",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00625",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id00844",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01161",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01513",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id01834",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "id02115",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/50398",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Aventures de Baron de Münchausen"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "fr"
+        }
+      ],
+      "Contributor": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Gustave Doré",
+          "FileAs": "Doré, Gustave",
+          "Role": "ill"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Théophile Gautier",
+          "FileAs": "Gautier, Théophile",
+          "Role": "trl"
+        }
+      ],
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Gottfried August Bürger",
+          "FileAs": "Bürger, Gottfried August",
+          "Role": ""
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Rudolf Erich Raspe",
+          "FileAs": "Raspe, Rudolf Erich",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2015-11-06",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2018-10-24T09:51:17.150207+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/files/50398/50398-h/50398-h.htm"
+        }
+      ],
+      "Subject": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Humorous stories"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Voyages and travels -- Fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Voyages, Imaginary -- Fiction"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Tall tales"
+        }
+      ],
+      "Type": null,
+      "Meta": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "",
+          "Refines": "",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "",
+          "Name": "cover",
+          "Content": "item1"
+        }
+      ],
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@50398@50398-h@images@cover.jpg",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "image/jpeg",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item2",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "0.css",
+          "ID": "item3",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "1.css",
+          "ID": "item4",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@50398@50398-h@50398-h-0.htm.html",
+          "ID": "item5",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@50398@50398-h@50398-h-1.htm.html",
+          "ID": "item6",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@50398@50398-h@50398-h-2.htm.html",
+          "ID": "item7",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@50398@50398-h@50398-h-3.htm.html",
+          "ID": "item8",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@50398@50398-h@50398-h-4.htm.html",
+          "ID": "item9",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "wrap0000.html",
+          "ID": "coverpage-wrapper",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "coverpage-wrapper",
+          "Linear": "no",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item5",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item6",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item7",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item8",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item9",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  },
+  {
+    "XMLName": {
+      "Space": "http://www.idpf.org/2007/opf",
+      "Local": "package"
+    },
+    "UniqueIdentifier": "id",
+    "Version": "2.0",
+    "Metadata": {
+      "Identifier": [
+        {
+          "Dir": "",
+          "ID": "id",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/ebooks/54873",
+          "Scheme": "URI"
+        }
+      ],
+      "Title": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Vingt mille lieues sous les mers"
+        }
+      ],
+      "Language": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "fr"
+        }
+      ],
+      "Contributor": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Alphonse de Neuville",
+          "FileAs": "Neuville, Alphonse de",
+          "Role": "ill"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Edouard Riou",
+          "FileAs": "Riou, Edouard",
+          "Role": "ill"
+        }
+      ],
+      "Coverage": null,
+      "Creator": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Jules Verne",
+          "FileAs": "Verne, Jules",
+          "Role": ""
+        }
+      ],
+      "Date": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2017-06-09",
+          "Event": "publication"
+        },
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "2018-10-27T05:35:22.719714+00:00",
+          "Event": "conversion"
+        }
+      ],
+      "Description": null,
+      "Format": null,
+      "Publisher": null,
+      "Relation": null,
+      "Rights": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "Public domain in the USA."
+        }
+      ],
+      "Source": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Lang": "",
+          "Value": "http://www.gutenberg.org/files/54873/54873-h/54873-h.htm"
+        }
+      ],
+      "Subject": null,
+      "Type": null,
+      "Meta": [
+        {
+          "Dir": "",
+          "ID": "",
+          "Property": "",
+          "Refines": "",
+          "Scheme": "",
+          "Lang": "",
+          "Value": "",
+          "Name": "cover",
+          "Content": "item1"
+        }
+      ],
+      "Link": null
+    },
+    "Manifest": {
+      "ID": "",
+      "Items": [
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@images@cover.jpg",
+          "ID": "item1",
+          "MediaOverlay": "",
+          "MediaType": "image/jpeg",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "pgepub.css",
+          "ID": "item2",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "0.css",
+          "ID": "item3",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "1.css",
+          "ID": "item4",
+          "MediaOverlay": "",
+          "MediaType": "text/css",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-0.htm.html",
+          "ID": "item5",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-1.htm.html",
+          "ID": "im_007",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-2.htm.html",
+          "ID": "ch_107",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-3.htm.html",
+          "ID": "im_018",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-4.htm.html",
+          "ID": "ch_113",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-5.htm.html",
+          "ID": "im_032",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-6.htm.html",
+          "ID": "im_038",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-7.htm.html",
+          "ID": "im_044",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-8.htm.html",
+          "ID": "ch_123",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-9.htm.html",
+          "ID": "part_2",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-10.htm.html",
+          "ID": "im_059",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-11.htm.html",
+          "ID": "Page_246",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-12.htm.html",
+          "ID": "im_068",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-13.htm.html",
+          "ID": "im_074",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-14.htm.html",
+          "ID": "im_081",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-15.htm.html",
+          "ID": "im_088",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-16.htm.html",
+          "ID": "im_094",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-17.htm.html",
+          "ID": "im_099",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-18.htm.html",
+          "ID": "im_105",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-19.htm.html",
+          "ID": "im_109",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "@public@vhost@g@gutenberg@html@files@54873@54873-h@54873-h-20.htm.html",
+          "ID": "item6",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "toc.ncx",
+          "ID": "ncx",
+          "MediaOverlay": "",
+          "MediaType": "application/x-dtbncx+xml",
+          "Properties": ""
+        },
+        {
+          "Fallback": "",
+          "Href": "wrap0000.html",
+          "ID": "coverpage-wrapper",
+          "MediaOverlay": "",
+          "MediaType": "application/xhtml+xml",
+          "Properties": ""
+        }
+      ]
+    },
+    "Spine": {
+      "ID": "",
+      "PageProgression": "",
+      "Toc": "ncx",
+      "Itemrefs": [
+        {
+          "ID": "",
+          "IDref": "coverpage-wrapper",
+          "Linear": "no",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item5",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_007",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "ch_107",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_018",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "ch_113",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_032",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_038",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_044",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "ch_123",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "part_2",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_059",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "Page_246",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_068",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_074",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_081",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_088",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_094",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_099",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_105",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "im_109",
+          "Linear": "yes",
+          "Properties": ""
+        },
+        {
+          "ID": "",
+          "IDref": "item6",
+          "Linear": "yes",
+          "Properties": ""
+        }
+      ]
+    }
+  }
+]

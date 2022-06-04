@@ -82,6 +82,8 @@ type GenericMetadata struct {
 }
 
 // GetMetadata reads metadata from the given epub opened as a ReadAtSeeker.
+// Deprecated: interacting with epub through ReadAtSeeker will be suppressed in
+// next version, seems not useful in practice.
 func GetMetadata(rzip ReadAtSeeker) (*MetaInformation, error) {
 	opf, err := GetPackage(rzip)
 	if err != nil {
@@ -103,6 +105,8 @@ func GetMetadataFromFile(path string) (*MetaInformation, error) {
 }
 
 // GetPackage reads an epub's Open Package Document from an epub opened as a ReadAtSeeker.
+// Deprecated: interacting with epub through ReadAtSeeker will be suppressed in
+// next version, seems not useful in practice.
 func GetPackage(rzip ReadAtSeeker) (*PackageDocument, error) {
 	c, err := getContainer(rzip)
 	if err != nil {

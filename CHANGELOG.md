@@ -1,7 +1,8 @@
 # Changelog
 ## [0.2.0]
+- expose PackageDocument struct and add functions to get it from an epub.
 - add compliance to EPUB32 specifications https://www.w3.org/publishing/epub32/epub-packages.html.
-- expose PackageDocument struct and add functions to aread it from an epub.
+- add helpers (WalkXxX) to access EPUB publication resources.
 
 ## [0.1.0] - 2019-05-11
 ### Added

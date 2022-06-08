@@ -255,7 +255,7 @@ type Spine struct {
 	// content flows. Allowed values are ltr (left-to-right), rtl
 	// (right-to-left) and default.
 	PageProgression string `xml:"page-progression-direction,attr,omitempty"`
-	// TOC is a legacy feature that previously provided the table of
+	// Toc is a legacy feature that previously provided the table of
 	// contents for EPUB Publications.
 	Toc string `xml:"toc,attr,omitempty"`
 	// Itemrefs lists Publication Resources. The order of the Itemrefs

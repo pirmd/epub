@@ -57,6 +57,11 @@ type MetaInformation struct {
 	// Meta element provides a generic means of including package
 	// metadata.
 	Meta []GenericMetadata `json:",omitempty"`
+
+	// Series is the series to which this book belongs to.
+	Series string `json:",omitempty"`
+	// SeriesIndex is the position in the series to which the book belongs to.
+	SeriesIndex string `json:",omitempty"`
 }
 
 // Identifier represents an identifier.
@@ -193,6 +198,10 @@ func getMeta(mdata *Metadata) *MetaInformation {
 		})
 	}
 
+	m.Series, m.SeriesIndex = getSeries(mdata.Meta)
+
+	// TODO: should Meta used to 'refine' other attirbutes like Series or Title
+	// be removed?
 	for _, meta := range mdata.Meta {
 		m.Meta = append(m.Meta, GenericMetadata{
 			Name:    meta.Name,
@@ -256,6 +265,40 @@ nextElt:
 		}
 
 		title = append(title, e.Value)
+	}
+
+	return
+}
+
+// getSeries extracts series information from Meta. it supports 'claibre's-like
+// EPUB 2 series coding or EPUB30-like collection metadata. If both are
+// available, EPUB30 is prefered.
+func getSeries(meta []MetaLegacy) (series string, seriesIndex string) {
+	for _, m := range meta {
+		switch m.Name {
+		case "calibre:series":
+			series = m.Content
+
+		case "calibre:series_index":
+			seriesIndex = m.Content
+		}
+
+		if m.Property == "belongs-to-collection" {
+			series = m.Value
+
+			for _, mm := range meta {
+				if mm.Refines != "#"+m.ID {
+					continue
+				}
+				// TODO: filter-out cases where property 'collection-type' is
+				// not empty and not "series" (seems that it can be collection
+				// or set)
+				if mm.Property == "group-position" {
+					seriesIndex = mm.Value
+				}
+			}
+
+		}
 	}
 
 	return

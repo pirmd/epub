@@ -14,9 +14,11 @@ type MetaInformation struct {
 	// Identifier contains an identifier associated with the given
 	// Rendition, such as a UUID, DOI or ISBN.
 	Identifier []Identifier
-	// Title represents an instance of a name given to the EPUB
-	// Publication.
+	// Title represents the EPUB titles.
 	Title []string
+	// SubTitle represents the EPUB sub-titles.
+	SubTitle []string `json:",omitempty"`
+
 	// Language element specifies the language of the content of the
 	// given Rendition.
 	Language []string
@@ -155,7 +157,6 @@ func getPackage(zr *zip.Reader) (*PackageDocument, error) {
 
 func getMeta(mdata *Metadata) *MetaInformation {
 	m := &MetaInformation{
-		Title:       elt2str(mdata.Title),
 		Language:    elt2str(mdata.Language),
 		Subject:     elt2str(mdata.Subject),
 		Description: elt2str(mdata.Description),
@@ -168,6 +169,8 @@ func getMeta(mdata *Metadata) *MetaInformation {
 		Rights:      elt2str(mdata.Rights),
 	}
 
+	m.Title, m.SubTitle = getTitles(mdata.Title, mdata.Meta)
+
 	for _, id := range mdata.Identifier {
 		m.Identifier = append(m.Identifier, Identifier{
 			Value:  id.Value,
@@ -176,11 +179,11 @@ func getMeta(mdata *Metadata) *MetaInformation {
 	}
 
 	for _, auth := range mdata.Creator {
-		m.Creator = append(m.Creator, getAuth(auth, mdata))
+		m.Creator = append(m.Creator, getAuth(auth, mdata.Meta))
 	}
 
 	for _, auth := range mdata.Contributor {
-		m.Contributor = append(m.Contributor, getAuth(auth, mdata))
+		m.Contributor = append(m.Contributor, getAuth(auth, mdata.Meta))
 	}
 
 	for _, date := range mdata.Date {
@@ -210,25 +213,50 @@ func elt2str(elt []Element) []string {
 	return s
 }
 
-func getAuth(auth AuthorElt, mdata *Metadata) Author {
+func getAuth(auth AuthorElt, meta []MetaLegacy) Author {
 	a := Author{
 		FullName: auth.Value,
 		Role:     auth.Role,
 		FileAs:   auth.FileAs,
 	}
 
-	for _, meta := range mdata.Meta {
-		if meta.Refines != "#"+auth.ID {
+	for _, m := range meta {
+		if m.Refines != "#"+auth.ID {
 			continue
 		}
 
-		switch meta.Property {
+		switch m.Property {
 		case "role":
-			a.Role = meta.Value
+			a.Role = m.Value
 		case "file-as":
-			a.FileAs = meta.Value
+			a.FileAs = m.Value
 		}
 	}
 
 	return a
+}
+
+func getTitles(elt []Element, meta []MetaLegacy) (title []string, subtitle []string) {
+nextElt:
+	for _, e := range elt {
+		for _, m := range meta {
+			if m.Refines != "#"+e.ID {
+				continue
+			}
+
+			if m.Property == "title-type" {
+				switch m.Value {
+				case "subtitle":
+					subtitle = append(subtitle, e.Value)
+					break nextElt
+				}
+			}
+
+			break
+		}
+
+		title = append(title, e.Value)
+	}
+
+	return
 }

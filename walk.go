@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"io/fs"
+	"net/url"
 	"path/filepath"
 )
 
@@ -68,7 +69,12 @@ func WalkPublicationResources(path string, walkFn WalkFunc) error {
 			continue
 		}
 
-		itempath := filepath.Join(filepath.Dir(c.Rootfiles.FullPath), item.Href)
+		itempath, err := url.PathUnescape(item.Href)
+		if err != nil {
+			return err
+		}
+
+		itempath = filepath.Join(filepath.Dir(c.Rootfiles.FullPath), itempath)
 		f, err := zr.Open(itempath)
 		if err != nil {
 			return err
@@ -132,7 +138,12 @@ func WalkReadingContent(path string, walkFn WalkFunc) error {
 			continue
 		}
 
-		itempath := filepath.Join(filepath.Dir(c.Rootfiles.FullPath), item.Href)
+		itempath, err := url.PathUnescape(item.Href)
+		if err != nil {
+			return err
+		}
+
+		itempath = filepath.Join(filepath.Dir(c.Rootfiles.FullPath), itempath)
 		f, err := zr.Open(itempath)
 		if err != nil {
 			return err

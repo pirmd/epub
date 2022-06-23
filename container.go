@@ -9,6 +9,8 @@ const (
 	containerPath = "META-INF/container.xml"
 )
 
+//TODO: add support for multiple Rootfiles
+
 type container struct {
 	XMLName   xml.Name `xml:"urn:oasis:names:tc:opendocument:xmlns:container container"`
 	Rootfiles rootfile `xml:"rootfiles>rootfile"`

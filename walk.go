@@ -1,12 +1,10 @@
 package epub
 
 import (
-	"archive/zip"
 	"errors"
 	"fmt"
 	"io"
 	"io/fs"
-	"net/url"
 	"path/filepath"
 )
 
@@ -25,13 +23,13 @@ type WalkFunc func(r io.Reader, info fs.FileInfo) error
 
 // WalkFiles walks EPUB's files, calling walkFn for each visited resource.
 func WalkFiles(path string, walkFn WalkFunc) error {
-	zr, err := zip.OpenReader(path)
+	e, err := Open(path)
 	if err != nil {
 		return err
 	}
-	defer zr.Close()
+	defer e.Close()
 
-	for _, f := range zr.File {
+	for _, f := range e.File {
 		r, err := f.Open()
 		if err != nil {
 			return err
@@ -54,24 +52,13 @@ func WalkFiles(path string, walkFn WalkFunc) error {
 // Limitation: resources that are not belonging to the EPUB archive itself
 // (like remote resources) are silently ignored.
 func WalkPublicationResources(path string, walkFn WalkFunc) error {
-	zr, err := zip.OpenReader(path)
+	e, err := Open(path)
 	if err != nil {
 		return err
 	}
-	defer zr.Close()
+	defer e.Close()
 
-	c, err := getContainer(&zr.Reader)
-	if err != nil {
-		return err
-	}
-
-	r, err := zr.Open(c.Rootfiles.FullPath)
-	if err != nil {
-		return err
-	}
-	defer r.Close()
-
-	opf, err := newPackageDocument(r)
+	opf, err := e.Package()
 	if err != nil {
 		return err
 	}
@@ -81,13 +68,7 @@ func WalkPublicationResources(path string, walkFn WalkFunc) error {
 			continue
 		}
 
-		itempath, err := url.PathUnescape(item.Href)
-		if err != nil {
-			return err
-		}
-
-		itempath = filepath.Join(filepath.Dir(c.Rootfiles.FullPath), itempath)
-		f, err := zr.Open(itempath)
+		f, err := e.OpenItem(item.Href)
 		if err != nil {
 			return err
 		}
@@ -114,24 +95,13 @@ func WalkPublicationResources(path string, walkFn WalkFunc) error {
 // Limitation: resources that are not belonging to the EPUB archive itself
 // (like remote resources) are silently ignored.
 func WalkReadingContent(path string, walkFn WalkFunc) error {
-	zr, err := zip.OpenReader(path)
+	e, err := Open(path)
 	if err != nil {
 		return err
 	}
-	defer zr.Close()
+	defer e.Close()
 
-	c, err := getContainer(&zr.Reader)
-	if err != nil {
-		return err
-	}
-
-	r, err := zr.Open(c.Rootfiles.FullPath)
-	if err != nil {
-		return err
-	}
-	defer r.Close()
-
-	opf, err := newPackageDocument(r)
+	opf, err := e.Package()
 	if err != nil {
 		return err
 	}
@@ -153,13 +123,7 @@ func WalkReadingContent(path string, walkFn WalkFunc) error {
 			continue
 		}
 
-		itempath, err := url.PathUnescape(item.Href)
-		if err != nil {
-			return err
-		}
-
-		itempath = filepath.Join(filepath.Dir(c.Rootfiles.FullPath), itempath)
-		f, err := zr.Open(itempath)
+		f, err := e.OpenItem(item.Href)
 		if err != nil {
 			return err
 		}

@@ -1,10 +1,5 @@
 package epub
 
-import (
-	"fmt"
-	"os"
-)
-
 // Information gathers meta information about an epub as a simpler version
 // of Metadata to offer a more direct access to an Epub's metadata for simple
 // use cases.
@@ -87,27 +82,15 @@ type GenericMetadata struct {
 	Content string
 }
 
-// GetMetadata reads metadata from the given epub opened as a ReadAtSeeker.
-// Deprecated: interacting with epub through ReadAtSeeker will be suppressed in
-// next version, seems not useful in practice.
-func GetMetadata(rzip ReadAtSeeker) (*Information, error) {
-	opf, err := GetPackage(rzip)
-	if err != nil {
-		return nil, fmt.Errorf("not a valid Epub: %v", err)
-	}
-
-	return getMeta(opf.Metadata), nil
-}
-
 // GetMetadataFromFile reads metadata from an epub file.
 func GetMetadataFromFile(path string) (*Information, error) {
-	rzip, err := os.Open(path)
+	e, err := Open(path)
 	if err != nil {
 		return nil, err
 	}
-	defer rzip.Close()
+	defer e.Close()
 
-	return GetMetadata(rzip)
+	return e.Information()
 }
 
 func getMeta(mdata *Metadata) *Information {

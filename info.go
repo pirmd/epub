@@ -150,13 +150,13 @@ func getMeta(mdata *Metadata) *Information {
 
 	m.Series, m.SeriesIndex = getSeries(mdata.Meta)
 
-	// TODO: should Meta used to 'refine' other attirbutes like Series or Title
-	// be removed?
 	for _, meta := range mdata.Meta {
-		m.Meta = append(m.Meta, GenericMetadata{
-			Name:    meta.Name,
-			Content: meta.Content,
-		})
+		if meta.Name != "" && meta.Content != "" {
+			m.Meta = append(m.Meta, GenericMetadata{
+				Name:    meta.Name,
+				Content: meta.Content,
+			})
+		}
 	}
 
 	return m

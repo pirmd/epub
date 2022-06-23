@@ -2,6 +2,7 @@ package epub
 
 import (
 	"archive/zip"
+	"errors"
 	"fmt"
 	"io"
 	"io/fs"
@@ -9,9 +10,17 @@ import (
 	"path/filepath"
 )
 
+var (
+	// ErrStopWalk is used as a return value from WalkFunc to
+	// indicate that the Walkxxx operation need to be
+	// stopped. It is not return as an error by any Walkxxx
+	// function.
+	ErrStopWalk = errors.New("stop walk")
+)
+
 // WalkFunc is the signature of function called by Walkxxx on EPUB's resources.
-// Should and error be returned by WalkFn, Walkxx stops entirely and returns
-// that error.
+// Should an error be returned by WalkFn, Walkxxx stops and returns that error.
+// Only exception is returning ErrStopWalk error that only interrupts Walkxxx.
 type WalkFunc func(r io.Reader, info fs.FileInfo) error
 
 // WalkFiles walks EPUB's files, calling walkFn for each visited resource.
@@ -30,6 +39,9 @@ func WalkFiles(path string, walkFn WalkFunc) error {
 		defer r.Close()
 
 		if err := walkFn(r, f.FileHeader.FileInfo()); err != nil {
+			if err == ErrStopWalk {
+				return nil
+			}
 			return err
 		}
 	}
@@ -87,6 +99,9 @@ func WalkPublicationResources(path string, walkFn WalkFunc) error {
 		}
 
 		if err := walkFn(f, fi); err != nil {
+			if err == ErrStopWalk {
+				return nil
+			}
 			return err
 		}
 	}
@@ -156,6 +171,9 @@ func WalkReadingContent(path string, walkFn WalkFunc) error {
 		}
 
 		if err := walkFn(f, fi); err != nil {
+			if err == ErrStopWalk {
+				return nil
+			}
 			return err
 		}
 	}

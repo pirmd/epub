@@ -1,5 +1,7 @@
 # Changelog
-## [0.3.0] - Unreleased
+## [0.3.0] - 2023-02-26
+- solve dependencies security issues in golang.org/x/text (CVE-2021-38561,
+  CVE-2022-32149) and golang.org/x/net (CVE-2022-27664, CVE-2022-41721)
 - remove use of ReadAtSeeker as a mean to access an EPUB's metadata
 - create an Epub type to gather standard EPUB manipulation
 

@@ -36,3 +36,10 @@ func TestGetPackageFromFile(t *testing.T) {
 		t.Fatalf("Package Document is not as expected:\n%v", failure)
 	}
 }
+
+func TestGetPackageFromFileCorruptInput(t *testing.T) {
+	tc := filepath.Join(testdataPath, "corrupt", "*.epub")
+	if _, err := GetPackageFromFile(tc); err == nil {
+		t.Errorf("Expected error when getting package for %s", tc)
+	}
+}

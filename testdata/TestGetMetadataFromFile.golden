@@ -1,15 +1,22 @@
 [
   {
+    "Identifier": [
+      {
+        "Scheme": "ISBN",
+        "Value": "123456789X"
+      }
+    ],
     "Title": [
       "Row, Row, Row Your Boat"
     ],
     "Language": [
       "en-US"
     ],
-    "Identifier": [
+    "Contributor": [
       {
-        "Scheme": "ISBN",
-        "Value": "123456789X"
+        "FullName": "Phys.Org",
+        "FileAs": "Phys.Org",
+        "Role": "ill"
       }
     ],
     "Creator": [
@@ -19,8 +26,11 @@
         "Role": "aut"
       }
     ],
-    "Subject": [
-      "MUSIC / Lyrics"
+    "Date": [
+      {
+        "Stamp": "2018-01-01T00:00:00Z",
+        "Event": "publication"
+      }
     ],
     "Description": [
       "\"Row, Row, Row Your Boat\" is a popular children's song. The earliest printing of the song is from 1852, when the lyrics were published with similar lyrics to those used today, but with a very different tune."
@@ -28,27 +38,23 @@
     "Publisher": [
       "FYIcenter.com"
     ],
-    "Contributor": [
-      {
-        "FullName": "Phys.Org",
-        "FileAs": "Phys.Org",
-        "Role": "ill"
-      }
-    ],
-    "Date": [
-      {
-        "Stamp": "2018-01-01T00:00:00Z",
-        "Event": "publication"
-      }
+    "Rights": [
+      "CC0 Public Domain"
     ],
     "Source": [
       "urn:isbn:9780375704024"
     ],
-    "Rights": [
-      "CC0 Public Domain"
+    "Subject": [
+      "MUSIC / Lyrics"
     ]
   },
   {
+    "Identifier": [
+      {
+        "Scheme": "",
+        "Value": "urn:uuid:404d6d3a-429e-11e8-842f-0ed5f89f718b"
+      }
+    ],
     "Title": [
       "Row, Row, Row Your Boat",
       "Row Your Boat",
@@ -57,31 +63,16 @@
     "Language": [
       "en-US"
     ],
-    "Identifier": [
+    "Contributor": [
       {
-        "Scheme": "",
-        "Value": "urn:uuid:404d6d3a-429e-11e8-842f-0ed5f89f718b"
+        "FullName": "Phys.Org",
+        "FileAs": "",
+        "Role": ""
       }
     ],
     "Creator": [
       {
         "FullName": "Unknown Person",
-        "FileAs": "",
-        "Role": ""
-      }
-    ],
-    "Subject": [
-      "MUSIC / Lyrics"
-    ],
-    "Description": [
-      "\"Row, Row, Row Your Boat\" is a popular children's song. The earliest printing of the song is from 1852, when the lyrics were published with similar lyrics to those used today, but with a very different tune."
-    ],
-    "Publisher": [
-      "FYIcenter.com"
-    ],
-    "Contributor": [
-      {
-        "FullName": "Phys.Org",
         "FileAs": "",
         "Role": ""
       }
@@ -92,43 +83,34 @@
         "Event": ""
       }
     ],
-    "Source": [
-      "urn:isbn:9780375704024"
+    "Description": [
+      "\"Row, Row, Row Your Boat\" is a popular children's song. The earliest printing of the song is from 1852, when the lyrics were published with similar lyrics to those used today, but with a very different tune."
+    ],
+    "Publisher": [
+      "FYIcenter.com"
     ],
     "Rights": [
       "CC0 Public Domain"
     ],
-    "Meta": [
-      {
-        "Name": "",
-        "Content": ""
-      },
-      {
-        "Name": "",
-        "Content": ""
-      },
-      {
-        "Name": "",
-        "Content": ""
-      },
-      {
-        "Name": "",
-        "Content": ""
-      }
+    "Source": [
+      "urn:isbn:9780375704024"
+    ],
+    "Subject": [
+      "MUSIC / Lyrics"
     ]
   },
   {
-    "Title": [
-      "Alice's Adventures in Wonderland"
-    ],
-    "Language": [
-      "en"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/11"
       }
+    ],
+    "Title": [
+      "Alice's Adventures in Wonderland"
+    ],
+    "Language": [
+      "en"
     ],
     "Creator": [
       {
@@ -136,9 +118,6 @@
         "FileAs": "Carroll, Lewis",
         "Role": ""
       }
-    ],
-    "Subject": [
-      "Fantasy"
     ],
     "Date": [
       {
@@ -150,25 +129,28 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.org/files/11/11-h/11-h.htm"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Fantasy"
     ]
   },
   {
-    "Title": [
-      "Les Mémoires d'un âne."
-    ],
-    "Language": [
-      "fr"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/12783"
       }
+    ],
+    "Title": [
+      "Les Mémoires d'un âne."
+    ],
+    "Language": [
+      "fr"
     ],
     "Creator": [
       {
@@ -176,9 +158,6 @@
         "FileAs": "Ségur, Sophie, comtesse de",
         "Role": ""
       }
-    ],
-    "Subject": [
-      "Donkeys -- Juvenile fiction"
     ],
     "Date": [
       {
@@ -190,25 +169,28 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.org/files/12783/12783-h/12783-h.htm"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Donkeys -- Juvenile fiction"
     ]
   },
   {
-    "Title": [
-      "The Adventures of Sherlock Holmes"
-    ],
-    "Language": [
-      "en"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/1661"
       }
+    ],
+    "Title": [
+      "The Adventures of Sherlock Holmes"
+    ],
+    "Language": [
+      "en"
     ],
     "Creator": [
       {
@@ -216,11 +198,6 @@
         "FileAs": "Doyle, Arthur Conan",
         "Role": ""
       }
-    ],
-    "Subject": [
-      "Holmes, Sherlock (Fictitious character) -- Fiction",
-      "Private investigators -- England -- Fiction",
-      "Detective and mystery stories, English"
     ],
     "Date": [
       {
@@ -232,25 +209,30 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.org/files/1661/1661-h/1661-h.htm"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Holmes, Sherlock (Fictitious character) -- Fiction",
+      "Private investigators -- England -- Fiction",
+      "Detective and mystery stories, English"
     ]
   },
   {
-    "Title": [
-      "西遊記"
-    ],
-    "Language": [
-      "zh"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/23962"
       }
+    ],
+    "Title": [
+      "西遊記"
+    ],
+    "Language": [
+      "zh"
     ],
     "Creator": [
       {
@@ -258,12 +240,6 @@
         "FileAs": "Wu, Cheng'en",
         "Role": ""
       }
-    ],
-    "Subject": [
-      "Folklore -- China",
-      "Legends -- China",
-      "Xuanzang, approximately 596-664 -- Fiction",
-      "Chinese fiction -- Ming dynasty, 1368-1644"
     ],
     "Date": [
       {
@@ -275,35 +251,31 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.orgfiles/23962/23962-0.txt"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Folklore -- China",
+      "Legends -- China",
+      "Xuanzang, approximately 596-664 -- Fiction",
+      "Chinese fiction -- Ming dynasty, 1368-1644"
     ]
   },
   {
-    "Title": [
-      "Histoire de Pierre Lapin"
-    ],
-    "Language": [
-      "fr"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/29052"
       }
     ],
-    "Creator": [
-      {
-        "FullName": "Beatrix Potter",
-        "FileAs": "Potter, Beatrix",
-        "Role": ""
-      }
+    "Title": [
+      "Histoire de Pierre Lapin"
     ],
-    "Subject": [
-      "Rabbits -- Juvenile fiction"
+    "Language": [
+      "fr"
     ],
     "Contributor": [
       {
@@ -317,6 +289,13 @@
         "Role": "trl"
       }
     ],
+    "Creator": [
+      {
+        "FullName": "Beatrix Potter",
+        "FileAs": "Potter, Beatrix",
+        "Role": ""
+      }
+    ],
     "Date": [
       {
         "Stamp": "2009-06-06",
@@ -327,11 +306,14 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.org/files/29052/29052-h/29052-h.htm"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Rabbits -- Juvenile fiction"
     ],
     "Meta": [
       {
@@ -341,17 +323,17 @@
     ]
   },
   {
-    "Title": [
-      "Voyage au Centre de la Terre"
-    ],
-    "Language": [
-      "fr"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/4791"
       }
+    ],
+    "Title": [
+      "Voyage au Centre de la Terre"
+    ],
+    "Language": [
+      "fr"
     ],
     "Creator": [
       {
@@ -359,12 +341,6 @@
         "FileAs": "Verne, Jules",
         "Role": ""
       }
-    ],
-    "Subject": [
-      "Science fiction",
-      "Adventure stories",
-      "Earth (Planet) -- Core -- Fiction",
-      "Voyages, Imaginary -- Fiction"
     ],
     "Date": [
       {
@@ -376,24 +352,42 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.orgfiles/4791/4791-8/4791-8.txt"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Science fiction",
+      "Adventure stories",
+      "Earth (Planet) -- Core -- Fiction",
+      "Voyages, Imaginary -- Fiction"
     ]
   },
   {
+    "Identifier": [
+      {
+        "Scheme": "URI",
+        "Value": "http://www.gutenberg.org/ebooks/50398"
+      }
+    ],
     "Title": [
       "Aventures de Baron de Münchausen"
     ],
     "Language": [
       "fr"
     ],
-    "Identifier": [
+    "Contributor": [
       {
-        "Scheme": "URI",
-        "Value": "http://www.gutenberg.org/ebooks/50398"
+        "FullName": "Gustave Doré",
+        "FileAs": "Doré, Gustave",
+        "Role": "ill"
+      },
+      {
+        "FullName": "Théophile Gautier",
+        "FileAs": "Gautier, Théophile",
+        "Role": "trl"
       }
     ],
     "Creator": [
@@ -408,24 +402,6 @@
         "Role": ""
       }
     ],
-    "Subject": [
-      "Humorous stories",
-      "Voyages and travels -- Fiction",
-      "Voyages, Imaginary -- Fiction",
-      "Tall tales"
-    ],
-    "Contributor": [
-      {
-        "FullName": "Gustave Doré",
-        "FileAs": "Doré, Gustave",
-        "Role": "ill"
-      },
-      {
-        "FullName": "Théophile Gautier",
-        "FileAs": "Gautier, Théophile",
-        "Role": "trl"
-      }
-    ],
     "Date": [
       {
         "Stamp": "2015-11-06",
@@ -436,11 +412,17 @@
         "Event": "conversion"
       }
     ],
+    "Rights": [
+      "Public domain in the USA."
+    ],
     "Source": [
       "http://www.gutenberg.org/files/50398/50398-h/50398-h.htm"
     ],
-    "Rights": [
-      "Public domain in the USA."
+    "Subject": [
+      "Humorous stories",
+      "Voyages and travels -- Fiction",
+      "Voyages, Imaginary -- Fiction",
+      "Tall tales"
     ],
     "Meta": [
       {
@@ -450,24 +432,17 @@
     ]
   },
   {
-    "Title": [
-      "Vingt mille lieues sous les mers"
-    ],
-    "Language": [
-      "fr"
-    ],
     "Identifier": [
       {
         "Scheme": "URI",
         "Value": "http://www.gutenberg.org/ebooks/54873"
       }
     ],
-    "Creator": [
-      {
-        "FullName": "Jules Verne",
-        "FileAs": "Verne, Jules",
-        "Role": ""
-      }
+    "Title": [
+      "Vingt mille lieues sous les mers"
+    ],
+    "Language": [
+      "fr"
     ],
     "Contributor": [
       {
@@ -481,6 +456,13 @@
         "Role": "ill"
       }
     ],
+    "Creator": [
+      {
+        "FullName": "Jules Verne",
+        "FileAs": "Verne, Jules",
+        "Role": ""
+      }
+    ],
     "Date": [
       {
         "Stamp": "2017-06-09",
@@ -491,11 +473,11 @@
         "Event": "conversion"
       }
     ],
-    "Source": [
-      "http://www.gutenberg.org/files/54873/54873-h/54873-h.htm"
-    ],
     "Rights": [
       "Public domain in the USA."
+    ],
+    "Source": [
+      "http://www.gutenberg.org/files/54873/54873-h/54873-h.htm"
     ],
     "Meta": [
       {

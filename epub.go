@@ -1,77 +1,96 @@
-// epub package provides a way to retrieve stored metadata from epub files.
-
+// Package epub provides a way to retrieve stored metadata from epub files.
 package epub
 
 import (
-	"encoding/xml"
-	"fmt"
-	"io"
-	"os"
-
-	"golang.org/x/net/html/charset"
+	"archive/zip"
+	"io/fs"
+	"net/url"
+	"path/filepath"
 )
 
-//GetMetadata reads metadata from the given epub opened as a readatSeeker
-func GetMetadata(r readatSeeker) (*Metadata, error) {
-	opf, err := GetOPFData(r)
-	if err != nil {
-		return nil, fmt.Errorf("not a valid Epub: %v", err)
-	}
+// Epub represents a read-only EPUB document.
+type Epub struct {
+	*zip.ReadCloser
 
-	return opf.Metadata, nil
+	rootfile string
 }
 
-//GetMetadataFromFile reads metadata from the given epub file
-func GetMetadataFromFile(path string) (*Metadata, error) {
-	r, err := os.Open(path)
+// Open an EPUB from a file.
+// Returned Epub needs to be closed when no longer needed.
+func Open(path string) (*Epub, error) {
+	e := new(Epub)
+
+	var err error
+	if e.ReadCloser, err = zip.OpenReader(path); err != nil {
+		e.Close()
+		return nil, err
+	}
+
+	c, err := e.container()
+	if err != nil {
+		e.Close()
+		return nil, err
+	}
+
+	e.rootfile = c.Rootfiles.FullPath
+
+	return e, nil
+}
+
+// OpenItem opens an EPUB Publication Resource identified by its href as
+// usually found in Manifest.
+// OpenItem will try to unescape href first.
+// Opening Items whoses Href points outside of EPUB archive will failed.
+func (e *Epub) OpenItem(href string) (fs.File, error) {
+	name, err := url.PathUnescape(href)
+	if err != nil {
+		return nil, err
+	}
+
+	path := filepath.Join(filepath.Dir(e.rootfile), name)
+	return e.Open(path)
+}
+
+// container returns the EPUB Container.
+func (e *Epub) container() (*container, error) {
+	r, err := e.Open(containerPath)
 	if err != nil {
 		return nil, err
 	}
 	defer r.Close()
 
-	return GetMetadata(r)
+	return newContainer(r)
 }
 
-func getContainerData(r readatSeeker) (*containerXML, error) {
-	f, err := openFromZip(r, containerPath)
+// Package returns the EPUB PackageDocument.
+func (e *Epub) Package() (*PackageDocument, error) {
+	r, err := e.Open(e.rootfile)
 	if err != nil {
 		return nil, err
 	}
-	defer f.Close()
+	defer r.Close()
 
-	c := &containerXML{}
-	err = decodeXML(f, &c)
-	if err != nil {
-		return nil, err
-	}
-	return c, nil
+	return newPackageDocument(r)
 }
 
-// GetOPFData reads the whole OPF from the given epub file
-func GetOPFData(r readatSeeker) (*packageXML, error) {
-	c, err := getContainerData(r)
+// Information returns a simplified but easier to use version of
+// PackageDocument.Metadata.
+func (e *Epub) Information() (*Information, error) {
+	opf, err := e.Package()
 	if err != nil {
 		return nil, err
 	}
 
-	f, err := openFromZip(r, c.Rootfiles.FullPath)
-	if err != nil {
-		return nil, err
-	}
-	defer f.Close()
-
-	opf := &packageXML{}
-	err = decodeXML(f, &opf)
-	if err != nil {
-		return nil, err
-	}
-
-	return opf, nil
+	return getMeta(opf.Metadata), nil
 }
 
-func decodeXML(f io.Reader, v interface{}) error {
-	decoder := xml.NewDecoder(f)
-	decoder.Entity = xml.HTMLEntity
-	decoder.CharsetReader = charset.NewReaderLabel
-	return decoder.Decode(v)
+// GetPackageFromFile reads an epub's Open Package Document from an epub  file.
+func GetPackageFromFile(path string) (*PackageDocument, error) {
+	e, err := Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer e.Close()
+
+	return e.Package()
 }

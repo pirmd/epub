@@ -1,8 +1,10 @@
-module github.com/svera/epub
+module github.com/pirmd/epub
 
 go 1.16
 
 require (
-	github.com/pirmd/verify v0.5.3
-	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
+	github.com/mattn/go-runewidth v0.0.13 // indirect
+	github.com/pirmd/text v0.6.2 // indirect
+	github.com/pirmd/verify v0.8.0
+	golang.org/x/net v0.7.0
 )

@@ -22,7 +22,6 @@ func Open(path string) (*Epub, error) {
 
 	var err error
 	if e.ReadCloser, err = zip.OpenReader(path); err != nil {
-		e.Close()
 		return nil, err
 	}
 

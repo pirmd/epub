@@ -106,17 +106,18 @@ func WalkReadingContent(path string, walkFn WalkFunc) error {
 		return err
 	}
 
-	for _, itemref := range opf.Spine.Itemrefs {
-		var item *Item
-		for _, it := range opf.Manifest.Items {
-			if itemref.IDref != "" && itemref.IDref == it.ID {
-				item = &it
-				break
-			}
-		}
+	// Build a map of item IDs to items for O(1) lookup
+	// This optimizes the nested loop from O(n²) to O(n)
+	itemMap := make(map[string]*Item, len(opf.Manifest.Items))
+	for i := range opf.Manifest.Items {
+		itemMap[opf.Manifest.Items[i].ID] = &opf.Manifest.Items[i]
+	}
 
-		if item == nil {
-			return fmt.Errorf("found a Spine %s entry that does not exist in Manifest", itemref.IDref)
+	for _, itemref := range opf.Spine.Itemrefs {
+		// Use the pre-built map for O(1) lookup instead of O(n) search
+		item, exists := itemMap[itemref.IDref]
+		if !exists {
+			return fmt.Errorf("found a Spine entry %q that does not exist in Manifest", itemref.IDref)
 		}
 
 		if item.Href == "" || filepath.IsAbs(item.Href) {

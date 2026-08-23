@@ -20,7 +20,7 @@ type Information struct {
 	// that played a secondary role in the creation of the content of an
 	// EPUB Publication.
 	Contributor []Author `json:",omitempty"`
-	// Coverage gives the extent or scope of the publication’s content.
+	// Coverage gives the extent or scope of the publication's content.
 	Coverage []string `json:",omitempty"`
 	// Creator represents the name of a person, organization, etc.
 	// responsible for the creation of the content of the Rendition.
@@ -93,6 +93,68 @@ func GetMetadataFromFile(path string) (*Information, error) {
 	return e.Information()
 }
 
+// Title returns the first title if available, otherwise an empty string.
+func (i *Information) Title() string {
+	if len(i.Title) > 0 {
+		return i.Title[0]
+	}
+	return ""
+}
+
+// Author returns the first author's full name if available, otherwise an empty string.
+func (i *Information) Author() string {
+	if len(i.Creator) > 0 {
+		return i.Creator[0].FullName
+	}
+	return ""
+}
+
+// Language returns the first language if available, otherwise an empty string.
+func (i *Information) Language() string {
+	if len(i.Language) > 0 {
+		return i.Language[0]
+	}
+	return ""
+}
+
+// Publisher returns the first publisher if available, otherwise an empty string.
+func (i *Information) Publisher() string {
+	if len(i.Publisher) > 0 {
+		return i.Publisher[0]
+	}
+	return ""
+}
+
+// Description returns the first description if available, otherwise an empty string.
+func (i *Information) Description() string {
+	if len(i.Description) > 0 {
+		return i.Description[0]
+	}
+	return ""
+}
+
+// HasLanguage checks if the specified language is in the Language list.
+func (i *Information) HasLanguage(lang string) bool {
+	for _, l := range i.Language {
+		if l == lang {
+			return true
+		}
+	}
+	return false
+}
+
+// SeriesInfo returns a formatted string with series and index.
+// Returns empty string if no series information is available.
+func (i *Information) SeriesInfo() string {
+	if i.Series == "" {
+		return ""
+	}
+	if i.SeriesIndex == "" {
+		return i.Series
+	}
+	return i.Series + " #" + i.SeriesIndex
+}
+
 func getMeta(mdata *Metadata) *Information {
 	m := &Information{
 		Language:    elt2str(mdata.Language),
@@ -145,16 +207,16 @@ func getMeta(mdata *Metadata) *Information {
 	return m
 }
 
+// elt2str converts a slice of Element to a slice of strings.
 func elt2str(elt []Element) []string {
-	s := make([]string, len(elt))
-
-	for i, e := range elt {
-		s[i] = e.Value
+	s := make([]string, 0, len(elt))
+	for _, e := range elt {
+		s = append(s, e.Value)
 	}
-
 	return s
 }
 
+// getAuth extracts author information from AuthorElt and enhances it with metadata.
 func getAuth(auth AuthorElt, meta []MetaLegacy) Author {
 	a := Author{
 		FullName: auth.Value,
@@ -178,61 +240,69 @@ func getAuth(auth AuthorElt, meta []MetaLegacy) Author {
 	return a
 }
 
+// getTitles extracts titles and subtitles from elements and metadata.
+// It prioritizes elements with title-type metadata to identify subtitles.
 func getTitles(elt []Element, meta []MetaLegacy) (title []string, subtitle []string) {
-nextElt:
-	for _, e := range elt {
-		for _, m := range meta {
-			if m.Refines != "#"+e.ID {
-				continue
-			}
-
-			if m.Property == "title-type" {
-				switch m.Value {
-				case "subtitle":
-					subtitle = append(subtitle, e.Value)
-					break nextElt
-				}
-			}
-
-			break
+	// Build a map of element ID to its metadata for O(1) lookup
+	metaMap := make(map[string][]MetaLegacy)
+	for _, m := range meta {
+		if m.Refines != "" {
+			metaMap[m.Refines] = append(metaMap[m.Refines], m)
 		}
-
-		title = append(title, e.Value)
 	}
 
-	return
+	for _, e := range elt {
+		// Check if this element has title-type metadata
+		if metas, exists := metaMap["#"+e.ID]; exists {
+			for _, m := range metas {
+				if m.Property == "title-type" {
+					switch m.Value {
+					case "subtitle":
+						subtitle = append(subtitle, e.Value)
+						goto nextElt
+					}
+				}
+			}
+		}
+		title = append(title, e.Value)
+	nextElt:
+	}
+
+	return title, subtitle
 }
 
-// getSeries extracts series information from Meta. it supports 'claibre's-like
-// EPUB 2 series coding or EPUB30-like collection metadata. If both are
-// available, EPUB30 is prefered.
+// getSeries extracts series information from Meta.
+// It supports both Calibre-like EPUB 2 series coding and EPUB3 collection metadata.
+// If both are available, EPUB3 is preferred.
 func getSeries(meta []MetaLegacy) (series string, seriesIndex string) {
+	// First, look for EPUB3 collection metadata (priority)
+	for _, m := range meta {
+		if m.Property == "belongs-to-collection" {
+			series = m.Value
+
+			// Look for group-position that refines this collection
+			for _, mm := range meta {
+				if mm.Refines == "#"+m.ID && mm.Property == "group-position" {
+					seriesIndex = mm.Value
+					break
+				}
+			}
+			// If we found series info via EPUB3, return immediately
+			if series != "" {
+				return series, seriesIndex
+			}
+		}
+	}
+
+	// Fall back to Calibre-style metadata
 	for _, m := range meta {
 		switch m.Name {
 		case "calibre:series":
 			series = m.Content
-
 		case "calibre:series_index":
 			seriesIndex = m.Content
 		}
-
-		if m.Property == "belongs-to-collection" {
-			series = m.Value
-
-			for _, mm := range meta {
-				if mm.Refines != "#"+m.ID {
-					continue
-				}
-				// TODO: filter-out cases where property 'collection-type' is
-				// not empty and not "series" (seems that it can be collection
-				// or set)
-				if mm.Property == "group-position" {
-					seriesIndex = mm.Value
-				}
-			}
-
-		}
 	}
 
-	return
+	return series, seriesIndex
 }

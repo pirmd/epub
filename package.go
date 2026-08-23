@@ -1,6 +1,7 @@
 package epub
 
 import (
+	"fmt"
 	"encoding/xml"
 	"io"
 )
@@ -307,7 +308,7 @@ func newPackageDocument(r io.Reader) (*PackageDocument, error) {
 	opf := &PackageDocument{}
 
 	if err := decodeXML(r, &opf); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to decode package document: %w", err)
 	}
 	return opf, nil
 }

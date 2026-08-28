@@ -2,6 +2,7 @@ package epub
 
 import (
 	"encoding/xml"
+	"fmt"
 	"io"
 )
 
@@ -24,7 +25,7 @@ type rootfile struct {
 func newContainer(r io.Reader) (*container, error) {
 	c := &container{}
 	if err := decodeXML(r, &c); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to decode container XML: %w", err)
 	}
 
 	return c, nil

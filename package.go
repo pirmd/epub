@@ -1,6 +1,7 @@
 package epub
 
 import (
+	"fmt"
 	"encoding/xml"
 	"io"
 )
@@ -57,7 +58,7 @@ type Metadata struct {
 	// that played a secondary role in the creation of the content of an
 	// EPUB Publication.
 	Contributor []AuthorElt `xml:"contributor,omitempty"`
-	// Coverage gives the extent or scope of the publication’s content.
+	// Coverage gives the extent or scope of the publication's content.
 	Coverage []Element `xml:"coverage,omitempty"`
 	// Creator represents the name of a person, organization, etc.
 	// responsible for the creation of the content of the Rendition.
@@ -307,7 +308,7 @@ func newPackageDocument(r io.Reader) (*PackageDocument, error) {
 	opf := &PackageDocument{}
 
 	if err := decodeXML(r, &opf); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("failed to decode package document: %w", err)
 	}
 	return opf, nil
 }

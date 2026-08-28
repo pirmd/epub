@@ -3,9 +3,11 @@ package epub
 
 import (
 	"archive/zip"
+	"fmt"
 	"io/fs"
 	"net/url"
 	"path/filepath"
+	"strings"
 )
 
 // Epub represents a read-only EPUB document.
@@ -39,15 +41,51 @@ func Open(path string) (*Epub, error) {
 // OpenItem opens an EPUB Publication Resource identified by its href as
 // usually found in Manifest.
 // OpenItem will try to unescape href first.
-// Opening Items whoses Href points outside of EPUB archive will failed.
+// Opening Items whose Href points outside of EPUB archive will fail.
 func (e *Epub) OpenItem(href string) (fs.File, error) {
-	name, err := url.PathUnescape(href)
-	if err != nil {
-		return nil, err
+	if href == "" {
+		return nil, fmt.Errorf("empty href")
 	}
 
-	path := filepath.Join(filepath.Dir(e.rootfile), name)
-	return e.Open(path)
+	name, err := url.PathUnescape(href)
+	if err != nil {
+		return nil, fmt.Errorf("failed to unescape href %q: %w", href, err)
+	}
+
+	// Prevent path traversal: ensure the resulting path stays within the EPUB archive
+	baseDir := filepath.Dir(e.rootfile)
+	path := filepath.Join(baseDir, name)
+	
+	// Clean the path to remove any ".." or "." components
+	cleanPath := filepath.Clean(path)
+	
+	// Ensure the cleaned path is still within the base directory
+	if !filepath.IsAbs(cleanPath) {
+		cleanPath = filepath.Join("/", cleanPath)
+	}
+	
+	baseClean := filepath.Clean(filepath.Join("/", baseDir))
+	if !strings.HasPrefix(cleanPath, baseClean) {
+		return nil, fmt.Errorf("invalid item path %q: points outside EPUB archive", href)
+	}
+	
+	// Remove leading "/" for zip archive access
+	zipPath := strings.TrimPrefix(cleanPath, "/")
+	
+	// Verify the file exists in the archive
+	found := false
+	for _, f := range e.File {
+		if f.Name == zipPath {
+			found = true
+			break
+		}
+	}
+	
+	if !found {
+		return nil, fmt.Errorf("item %q not found in EPUB archive", href)
+	}
+	
+	return e.Open(zipPath)
 }
 
 // container returns the EPUB Container.

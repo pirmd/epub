@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 // Information gathers meta information about an epub as a simpler version
 // of Metadata to offer a more direct access to an Epub's metadata for simple
 // use cases.
@@ -365,10 +364,12 @@ func extractCollections(col *Collection) []CollectionInfo {
 	collectionInfo.Size = len(col.Links)
 
 	// Look for position information in metadata
-	for _, meta := range col.Metadata.Meta {
-		if meta.Property == "group-position" {
-			if n, err := strToInt(meta.Value); err == nil {
-				collectionInfo.Position = n
+	if col.Metadata != nil {
+		for _, meta := range col.Metadata.Meta {
+			if meta.Property == "group-position" {
+				if n, err := strToInt(meta.Value); err == nil {
+					collectionInfo.Position = n
+				}
 			}
 		}
 	}
